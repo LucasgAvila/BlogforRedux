@@ -2,17 +2,19 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from './Menu';
 import Usuarios from './usuarios';
+import Publicaciones from "./Publicaciones";
 
-const Tareas = () => <div>Tareas</div>
+const Prueba = () => <div>Tareas</div>
 
 const App = () => (
   <BrowserRouter>
     <Menu />
     <div className='margen'>
-    <Routes>
-    <Route exact path='/' element={ <Usuarios />} />
-    <Route exact path='/tareas' element={ <Tareas /> } />
-    </Routes>
+    
+      <Route exact path='/' component={Usuarios} />
+			<Route exact path='/tareas' component={Prueba} />
+			<Route exact path='/publicaciones/:key' component={Publicaciones} />
+    
     </div>
   </BrowserRouter>
 );
