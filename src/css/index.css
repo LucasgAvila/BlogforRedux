@@ -31,3 +31,7 @@ body{
     width: 100px;
     height: 100px;
   }
+  .pub_title {
+    border-top: 1px solid black;
+  }
+
